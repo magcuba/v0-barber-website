@@ -18,7 +18,7 @@ export function About() {
             className="object-cover"
           />
           {/* Accent border */}
-          <div className="absolute -bottom-3 -right-3 h-full w-full rounded-sm border-2 border-primary/30 -z-10" />
+          <div className="absolute -bottom-3 -right-3 h-full w-full rounded-sm border-2 border-primary/20 -z-10" />
         </div>
 
         {/* Text */}

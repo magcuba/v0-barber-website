@@ -90,7 +90,7 @@ export function Contact() {
                 <input
                   id="firstName"
                   type="text"
-                  className="w-full rounded-sm border border-border bg-card px-4 py-3 text-sm text-card-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none"
+                  className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none"
                   placeholder="John"
                 />
               </div>
@@ -104,7 +104,7 @@ export function Contact() {
                 <input
                   id="lastName"
                   type="text"
-                  className="w-full rounded-sm border border-border bg-card px-4 py-3 text-sm text-card-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none"
+                  className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none"
                   placeholder="Doe"
                 />
               </div>
@@ -120,7 +120,7 @@ export function Contact() {
               <input
                 id="email"
                 type="email"
-                className="w-full rounded-sm border border-border bg-card px-4 py-3 text-sm text-card-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none"
+                className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none"
                 placeholder="john@example.com"
               />
             </div>
@@ -134,7 +134,7 @@ export function Contact() {
               </label>
               <select
                 id="service"
-                className="w-full rounded-sm border border-border bg-card px-4 py-3 text-sm text-card-foreground focus:border-primary focus:outline-none"
+                className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground focus:border-primary focus:outline-none"
               >
                 <option value="">{f.selectService}</option>
                 <option value="classic">{f.classicHaircut}</option>
@@ -156,7 +156,7 @@ export function Contact() {
               <textarea
                 id="message"
                 rows={4}
-                className="w-full resize-none rounded-sm border border-border bg-card px-4 py-3 text-sm text-card-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none"
+                className="w-full resize-none rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none"
                 placeholder={f.messagePlaceholder}
               />
             </div>

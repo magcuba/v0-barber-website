@@ -22,7 +22,7 @@ export function Testimonials() {
           {t.testimonials.items.map((item) => (
             <div
               key={item.name}
-              className="rounded-sm border border-border bg-card p-8"
+              className="rounded-sm border border-border bg-secondary p-8"
             >
               <div className="mb-4 flex gap-1">
                 {Array.from({ length: 5 }).map((_, i) => (

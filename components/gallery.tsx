@@ -52,7 +52,7 @@ export function Gallery() {
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-background/0 transition-all duration-300 group-hover:bg-background/20" />
+              <div className="absolute inset-0 bg-black/0 transition-all duration-300 group-hover:bg-black/20" />
             </div>
           ))}
         </div>

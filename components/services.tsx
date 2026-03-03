@@ -35,7 +35,7 @@ export function Services() {
           {t.services.items.map((service, index) => (
             <div
               key={service.title}
-              className="group rounded-sm border border-border bg-card p-8 transition-all hover:border-primary/40"
+              className="group rounded-sm border border-border bg-background p-8 transition-all hover:border-primary/40"
             >
               <div className="mb-5 flex items-center justify-between">
                 <span className="text-primary">{icons[index]}</span>
