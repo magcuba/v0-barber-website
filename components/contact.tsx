@@ -1,21 +1,24 @@
 "use client"
 
 import { MapPin, Phone, Clock, Instagram } from "lucide-react"
+import { useLanguage } from "@/lib/language-context"
 
 export function Contact() {
+  const { t } = useLanguage()
+  const f = t.contact.form
+
   return (
     <section id="contact" className="bg-secondary py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-16 text-center">
           <p className="mb-3 text-sm uppercase tracking-[0.3em] text-primary">
-            Contact
+            {t.contact.subtitle}
           </p>
           <h2 className="font-serif text-4xl tracking-tight text-foreground md:text-5xl text-balance">
-            Book Your Appointment
+            {t.contact.title}
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-muted-foreground leading-relaxed">
-            Ready for a premium grooming experience? Reach out to schedule your
-            next visit.
+            {t.contact.description}
           </p>
         </div>
 
@@ -26,7 +29,7 @@ export function Contact() {
               <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
               <div>
                 <h3 className="mb-1 text-sm font-medium uppercase tracking-wider text-foreground">
-                  Location
+                  {t.contact.location}
                 </h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">
                   247 West Elm Street
@@ -40,7 +43,7 @@ export function Contact() {
               <Phone className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
               <div>
                 <h3 className="mb-1 text-sm font-medium uppercase tracking-wider text-foreground">
-                  Phone
+                  {t.contact.phone}
                 </h3>
                 <p className="text-sm text-muted-foreground">(347) 555-0192</p>
               </div>
@@ -50,12 +53,12 @@ export function Contact() {
               <Clock className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
               <div>
                 <h3 className="mb-1 text-sm font-medium uppercase tracking-wider text-foreground">
-                  Hours
+                  {t.contact.hours}
                 </h3>
                 <div className="space-y-1 text-sm text-muted-foreground">
-                  <p>Tuesday &ndash; Friday: 9:00 AM &ndash; 7:00 PM</p>
-                  <p>Saturday: 8:00 AM &ndash; 5:00 PM</p>
-                  <p>Sunday &amp; Monday: Closed</p>
+                  {t.contact.hoursDetail.map((line, i) => (
+                    <p key={i}>{line}</p>
+                  ))}
                 </div>
               </div>
             </div>
@@ -64,7 +67,7 @@ export function Contact() {
               <Instagram className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
               <div>
                 <h3 className="mb-1 text-sm font-medium uppercase tracking-wider text-foreground">
-                  Social
+                  {t.contact.social}
                 </h3>
                 <p className="text-sm text-muted-foreground">@marcuscolebarber</p>
               </div>
@@ -82,7 +85,7 @@ export function Contact() {
                   htmlFor="firstName"
                   className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-foreground"
                 >
-                  First Name
+                  {f.firstName}
                 </label>
                 <input
                   id="firstName"
@@ -96,7 +99,7 @@ export function Contact() {
                   htmlFor="lastName"
                   className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-foreground"
                 >
-                  Last Name
+                  {f.lastName}
                 </label>
                 <input
                   id="lastName"
@@ -112,7 +115,7 @@ export function Contact() {
                 htmlFor="email"
                 className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-foreground"
               >
-                Email
+                {f.email}
               </label>
               <input
                 id="email"
@@ -127,19 +130,19 @@ export function Contact() {
                 htmlFor="service"
                 className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-foreground"
               >
-                Service
+                {f.service}
               </label>
               <select
                 id="service"
                 className="w-full rounded-sm border border-border bg-card px-4 py-3 text-sm text-card-foreground focus:border-primary focus:outline-none"
               >
-                <option value="">Select a service</option>
-                <option value="classic">Classic Haircut</option>
-                <option value="fade">Fade &amp; Taper</option>
-                <option value="shave">Hot Towel Shave</option>
-                <option value="beard">Beard Sculpting</option>
-                <option value="combo">Haircut &amp; Beard Combo</option>
-                <option value="executive">The Executive</option>
+                <option value="">{f.selectService}</option>
+                <option value="classic">{f.classicHaircut}</option>
+                <option value="fade">{f.fadeTaper}</option>
+                <option value="shave">{f.hotTowelShave}</option>
+                <option value="beard">{f.beardSculpting}</option>
+                <option value="combo">{f.haircutBeardCombo}</option>
+                <option value="executive">{f.theExecutive}</option>
               </select>
             </div>
 
@@ -148,13 +151,13 @@ export function Contact() {
                 htmlFor="message"
                 className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-foreground"
               >
-                Message
+                {f.message}
               </label>
               <textarea
                 id="message"
                 rows={4}
                 className="w-full resize-none rounded-sm border border-border bg-card px-4 py-3 text-sm text-card-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none"
-                placeholder="Preferred date/time or any details..."
+                placeholder={f.messagePlaceholder}
               />
             </div>
 
@@ -162,7 +165,7 @@ export function Contact() {
               type="submit"
               className="w-full rounded-sm bg-primary py-3.5 text-sm font-medium uppercase tracking-wider text-primary-foreground transition-opacity hover:opacity-90"
             >
-              Send Request
+              {f.submit}
             </button>
           </form>
         </div>

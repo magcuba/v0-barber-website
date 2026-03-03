@@ -1,4 +1,10 @@
+"use client"
+
+import { useLanguage } from "@/lib/language-context"
+
 export function Footer() {
+  const { t } = useLanguage()
+
   return (
     <footer className="border-t border-border bg-background py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 text-center md:flex-row md:justify-between md:text-left">
@@ -6,7 +12,7 @@ export function Footer() {
           Marcus Cole
         </a>
         <p className="text-xs text-muted-foreground">
-          &copy; {new Date().getFullYear()} Marcus Cole. All rights reserved.
+          &copy; {new Date().getFullYear()} Marcus Cole. {t.footer.rights}
         </p>
         <div className="flex gap-6">
           {["Instagram", "Twitter"].map((social) => (

@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image"
+import { useLanguage } from "@/lib/language-context"
 
 const images = [
   {
@@ -20,31 +23,28 @@ const images = [
 ]
 
 export function Gallery() {
+  const { t } = useLanguage()
+
   return (
     <section id="gallery" className="bg-secondary py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-16 text-center">
           <p className="mb-3 text-sm uppercase tracking-[0.3em] text-primary">
-            Gallery
+            {t.gallery.subtitle}
           </p>
           <h2 className="font-serif text-4xl tracking-tight text-foreground md:text-5xl text-balance">
-            The Craft in Action
+            {t.gallery.title}
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-muted-foreground leading-relaxed">
-            A glimpse into the precision, artistry, and atmosphere that defines
-            every visit.
+            {t.gallery.description}
           </p>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
-          {images.map((image, index) => (
+          {images.map((image) => (
             <div
               key={image.src}
-              className={`group relative overflow-hidden rounded-sm ${
-                index === 0 || index === 3
-                  ? "aspect-[4/3]"
-                  : "aspect-[4/3]"
-              }`}
+              className="group relative aspect-[4/3] overflow-hidden rounded-sm"
             >
               <Image
                 src={image.src}
