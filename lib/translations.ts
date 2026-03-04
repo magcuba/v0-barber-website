@@ -71,7 +71,7 @@ export const translations = {
     },
     about: {
       subtitle: "About",
-      title: "Meet Marcus Cole",
+      title: "Meet Raul  Gonzalez",
       paragraphs: [
         "With over 12 years behind the chair, I have dedicated my craft to the art of men\u2019s grooming. What started as an apprenticeship in a neighborhood shop evolved into a passion for precision and personal style.",
         "I believe every haircut is a collaboration. I take the time to understand your lifestyle, face shape, and preferences before a single blade touches your hair. My clients don\u2019t just leave looking sharp \u2014 they leave feeling confident.",
@@ -212,9 +212,9 @@ export const translations = {
     },
     about: {
       subtitle: "Acerca de",
-      title: "Conoce a Marcus Cole",
+      title: "Conoce a Raul  Gonzalez",
       paragraphs: [
-        "Con mas de 12 anos detras de la silla, he dedicado mi oficio al arte del cuidado masculino. Lo que comenzo como un aprendizaje en un local del barrio se convirtio en una pasion por la precision y el estilo personal.",
+        "Con mas de 12 años detras de la silla, he dedicado mi oficio al arte del cuidado masculino. Lo que comenzo como un aprendizaje en un local del barrio se convirtio en una pasion por la precision y el estilo personal.",
         "Creo que cada corte es una colaboracion. Me tomo el tiempo de entender tu estilo de vida, la forma de tu rostro y tus preferencias antes de que una sola cuchilla toque tu cabello. Mis clientes no solo se van con buen aspecto, sino sintiendose seguros de si mismos.",
         "Ya sea un degradado clasico, un fade moderno o un lujoso afeitado con toalla caliente, aporto el mismo nivel de cuidado y maestria en cada cita.",
       ],

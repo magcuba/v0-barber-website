@@ -13,7 +13,7 @@ export function About() {
         <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
           <Image
             src="/images/barber-portrait.jpg"
-            alt="Marcus Cole, master barber"
+            alt="Raul  Gonzalez, master barber"
             fill
             className="object-cover"
           />

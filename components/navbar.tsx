@@ -21,7 +21,7 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md shadow-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#" className="font-serif text-xl tracking-wide text-primary">
-          Marcus Cole
+          Raul  Gonzalez
         </a>
 
         {/* Desktop nav */}
