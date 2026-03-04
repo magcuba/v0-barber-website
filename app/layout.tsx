@@ -7,8 +7,8 @@ const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
-  title: 'Marcus Cole | Master Barber',
-  description: 'Premium grooming services by Marcus Cole. Precision haircuts, hot towel shaves, and beard sculpting in a refined atmosphere.',
+  title: 'Raul  Gonzalez | Master Barber',
+  description: 'Premium grooming services by Raul  Gonzalez. Precision haircuts, hot towel shaves, and beard sculpting in a refined atmosphere.',
   generator: 'v0.app',
   icons: {
     icon: [
