@@ -1,11 +1,56 @@
 "use client"
 
+import { useState } from "react"
 import { MapPin, Phone, Clock, Instagram } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
 export function Contact() {
-  const { t } = useLanguage()
+  const { t, locale } = useLanguage()
   const f = t.contact.form
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    service: "",
+    message: "",
+  })
+
+  const WHATSAPP_NUMBER = "17862100661"
+
+  function handleChange(
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
+  ) {
+    const { id, value } = e.target
+    setFormData((prev) => ({ ...prev, [id]: value }))
+  }
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+
+    const selectedService =
+      e.currentTarget.querySelector<HTMLSelectElement>("#service")?.selectedOptions?.[0]
+        ?.text || formData.service
+
+    const text =
+      locale === "es"
+        ? [
+            "Hola Raul, me gustaria reservar una cita.",
+            `Nombre: ${formData.firstName} ${formData.lastName}`.trim(),
+            `Telefono: ${formData.phone || "No proporcionado"}`,
+            `Servicio: ${selectedService || "No seleccionado"}`,
+            `Detalles: ${formData.message || "Sin detalles adicionales"}`,
+          ].join("\n")
+        : [
+            "Hello Raul, I'd like to book an appointment.",
+            `Name: ${formData.firstName} ${formData.lastName}`.trim(),
+            `Phone: ${formData.phone || "Not provided"}`,
+            `Service: ${selectedService || "Not selected"}`,
+            `Details: ${formData.message || "No additional details"}`,
+          ].join("\n")
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`
+    window.open(url, "_blank", "noopener,noreferrer")
+  }
 
   return (
     <section id="contact" className="bg-secondary py-24 md:py-32">
@@ -32,9 +77,9 @@ export function Contact() {
                   {t.contact.location}
                 </h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">
-                  247 West Elm Street
+                  1959 W 60th St
                   <br />
-                  Brooklyn, NY 11201
+                  Hialeah, FL 33012, USA
                 </p>
               </div>
             </div>
@@ -45,7 +90,7 @@ export function Contact() {
                 <h3 className="mb-1 text-sm font-medium uppercase tracking-wider text-foreground">
                   {t.contact.phone}
                 </h3>
-                <p className="text-sm text-muted-foreground">(347) 555-0192</p>
+                <p className="text-sm text-muted-foreground">+1 (786) 210-0661</p>
               </div>
             </div>
 
@@ -67,18 +112,22 @@ export function Contact() {
               <Instagram className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
               <div>
                 <h3 className="mb-1 text-sm font-medium uppercase tracking-wider text-foreground">
-                  {t.contact.social}
+                  Instagram
                 </h3>
-                <p className="text-sm text-muted-foreground">@marcuscolebarber</p>
+                <a
+                  href="https://www.instagram.com/_thegonzalez_barber/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                >
+                  _thegonzalez_barber
+                </a>
               </div>
             </div>
           </div>
 
           {/* Contact form */}
-          <form
-            onSubmit={(e) => e.preventDefault()}
-            className="space-y-5"
-          >
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
                 <label
@@ -90,8 +139,11 @@ export function Contact() {
                 <input
                   id="firstName"
                   type="text"
+                  value={formData.firstName}
+                  onChange={handleChange}
                   className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none"
                   placeholder="John"
+                  required
                 />
               </div>
               <div>
@@ -104,24 +156,30 @@ export function Contact() {
                 <input
                   id="lastName"
                   type="text"
+                  value={formData.lastName}
+                  onChange={handleChange}
                   className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none"
                   placeholder="Doe"
+                  required
                 />
               </div>
             </div>
 
             <div>
               <label
-                htmlFor="email"
+                htmlFor="phone"
                 className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-foreground"
               >
-                {f.email}
+                {f.phoneNumber}
               </label>
               <input
-                id="email"
-                type="email"
+                id="phone"
+                type="tel"
+                value={formData.phone}
+                onChange={handleChange}
                 className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none"
-                placeholder="john@example.com"
+                placeholder="111-222-3344"
+                required
               />
             </div>
 
@@ -134,7 +192,10 @@ export function Contact() {
               </label>
               <select
                 id="service"
+                value={formData.service}
+                onChange={handleChange}
                 className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground focus:border-primary focus:outline-none"
+                required
               >
                 <option value="">{f.selectService}</option>
                 <option value="classic">{f.classicHaircut}</option>
@@ -156,6 +217,8 @@ export function Contact() {
               <textarea
                 id="message"
                 rows={4}
+                value={formData.message}
+                onChange={handleChange}
                 className="w-full resize-none rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none"
                 placeholder={f.messagePlaceholder}
               />

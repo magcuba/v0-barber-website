@@ -124,7 +124,7 @@ export const translations = {
       form: {
         firstName: "First Name",
         lastName: "Last Name",
-        email: "Email",
+        phoneNumber: "Phone Number",
         service: "Service",
         message: "Message",
         selectService: "Select a service",
@@ -265,7 +265,7 @@ export const translations = {
       form: {
         firstName: "Nombre",
         lastName: "Apellido",
-        email: "Correo",
+        phoneNumber: "Telefono",
         service: "Servicio",
         message: "Mensaje",
         selectService: "Selecciona un servicio",

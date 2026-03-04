@@ -15,15 +15,20 @@ export function Footer() {
           &copy; {new Date().getFullYear()} Raul  Gonzalez. {t.footer.rights}
         </p>
         <div className="flex gap-6">
-          {["Instagram", "Twitter"].map((social) => (
-            <a
-              key={social}
-              href="#"
-              className="text-xs uppercase tracking-wider text-white/50 transition-colors hover:text-primary"
-            >
-              {social}
-            </a>
-          ))}
+          <a
+            href="https://www.instagram.com/_thegonzalez_barber/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-xs uppercase tracking-wider text-white/50 transition-colors hover:text-primary"
+          >
+            Instagram
+          </a>
+          <a
+            href="#"
+            className="text-xs uppercase tracking-wider text-white/50 transition-colors hover:text-primary"
+          >
+            Twitter
+          </a>
         </div>
       </div>
     </footer>
