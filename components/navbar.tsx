@@ -18,8 +18,8 @@ export function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md shadow-sm">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-white/98 to-white/90 backdrop-blur-xl shadow-[0_1px_3px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.04)] border-b border-white/60 after:absolute after:inset-x-0 after:top-0 after:h-[1px] after:bg-gradient-to-r after:from-transparent after:via-white after:to-transparent">
+      <div className="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#" className="font-serif text-xl tracking-wide text-primary">
           Raul  Gonzalez
         </a>
