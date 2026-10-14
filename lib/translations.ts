@@ -36,7 +36,7 @@ export const translations = {
           title: "Fade & Taper",
           description:
             "Expert skin fades, low fades, and tapers executed with surgical precision. Clean lines guaranteed.",
-          price: "$50",
+          price: "$35",
           duration: "50 min",
         },
         {
@@ -57,7 +57,7 @@ export const translations = {
           title: "Haircut & Beard Combo",
           description:
             "The complete package. Full precision haircut combined with a detailed beard sculpt and hot towel finish.",
-          price: "$75",
+          price: "$45",
           duration: "75 min",
         },
         {
@@ -177,7 +177,7 @@ export const translations = {
           title: "Degradado",
           description:
             "Degradados al ras, bajos y medios ejecutados con precision quirurgica. Lineas limpias garantizadas.",
-          price: "$50",
+          price: "$35",
           duration: "50 min",
         },
         {
@@ -198,7 +198,7 @@ export const translations = {
           title: "Corte + Barba",
           description:
             "El paquete completo. Corte de precision combinado con esculpido de barba detallado y acabado con toalla caliente.",
-          price: "$75",
+          price: "$45",
           duration: "75 min",
         },
         {
