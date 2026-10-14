@@ -29,7 +29,7 @@ export const translations = {
           title: "Classic Haircut",
           description:
             "A precision haircut tailored to your face shape and personal style. Includes consultation, wash, cut, and styling.",
-          price: "$45",
+          price: "$20",
           duration: "45 min",
         },
         {
@@ -170,7 +170,7 @@ export const translations = {
           title: "Corte Clasico",
           description:
             "Un corte de precision adaptado a la forma de tu rostro y estilo personal. Incluye consulta, lavado, corte y peinado.",
-          price: "$45",
+          price: "$20",
           duration: "45 min",
         },
         {
