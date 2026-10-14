@@ -95,7 +95,7 @@ export const translations = {
       items: [
         {
           name: "James T.",
-          text: "Marcus is the only barber I trust. Every cut is consistent, clean, and exactly what I ask for. The attention to detail is unmatched.",
+          text: "Raul is the only barber I trust. Every cut is consistent, clean, and exactly what I ask for. The attention to detail is unmatched.",
         },
         {
           name: "David R.",
@@ -103,7 +103,7 @@ export const translations = {
         },
         {
           name: "Michael S.",
-          text: "I\u2019ve been going to Marcus for three years now. He takes the time to understand what you want and delivers every single time. Highly recommend.",
+          text: "I\u2019ve been going to Raul for three years now. He takes the time to understand what you want and delivers every single time. Highly recommend.",
         },
       ],
     },
@@ -236,7 +236,7 @@ export const translations = {
       items: [
         {
           name: "James T.",
-          text: "Marcus es el unico barbero en quien confio. Cada corte es consistente, limpio y exactamente lo que pido. La atencion al detalle no tiene igual.",
+          text: "Raul es el unico barbero en quien confio. Cada corte es consistente, limpio y exactamente lo que pido. La atencion al detalle no tiene igual.",
         },
         {
           name: "David R.",
@@ -244,7 +244,7 @@ export const translations = {
         },
         {
           name: "Michael S.",
-          text: "Llevo tres anos yendo con Marcus. Se toma el tiempo de entender lo que quieres y cumple en cada ocasion. Totalmente recomendado.",
+          text: "Llevo tres anos yendo con Raul. Se toma el tiempo de entender lo que quieres y cumple en cada ocasion. Totalmente recomendado.",
         },
       ],
     },
