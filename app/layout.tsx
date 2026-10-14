@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   description: 'Premium grooming services by Raul Gonzalez. Precision haircuts, hot towel shaves, and beard sculpting in a refined atmosphere.',
   icons: {
     icon: [
-      { url: '/barber-icon.svg', type: 'image/svg+xml' },
-      { url: '/barber-icon-32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/barber-favicon-32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/barber-favicon.svg', type: 'image/svg+xml' },
     ],
     apple: '/barber-apple-icon.png',
   },

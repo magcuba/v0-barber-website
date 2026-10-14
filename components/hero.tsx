@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { useLanguage } from "@/lib/language-context"
 
 export function Hero() {
@@ -8,14 +7,18 @@ export function Hero() {
 
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <Image
-        src="/images/hero-barber.jpg"
-        alt="Premium barbershop interior with warm lighting"
-        fill
-        className="object-cover"
-        priority
-      />
+      {/* Background video */}
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        poster="/images/hero-barber.jpg"
+      >
+        <source src="/videos/hero-barber.mp4" type="video/mp4" />
+      </video>
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60" />
 
