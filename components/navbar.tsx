@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 import { LanguageToggle } from "@/components/language-toggle"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -18,9 +19,9 @@ export function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-white/98 to-white/90 backdrop-blur-xl shadow-[0_1px_3px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.04)] border-b border-white/60 after:absolute after:inset-x-0 after:top-0 after:h-[1px] after:bg-gradient-to-r after:from-transparent after:via-white after:to-transparent">
-      <div className="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#" className="font-serif text-xl tracking-wide text-primary">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/95 shadow-[0_4px_16px_rgba(0,0,0,0.08)] backdrop-blur-xl">
+      <div className="relative mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6">
+        <a href="#" className="font-serif text-lg tracking-wide text-primary md:text-xl">
           Raul  Gonzalez
         </a>
 
@@ -40,6 +41,7 @@ export function Navbar() {
 
         <div className="hidden items-center gap-4 md:flex">
           <LanguageToggle />
+          <ThemeToggle />
           <a
             href="#contact"
             className="rounded-sm bg-primary px-5 py-2.5 text-sm font-medium uppercase tracking-wider text-primary-foreground transition-opacity hover:opacity-90"
@@ -51,6 +53,7 @@ export function Navbar() {
         {/* Mobile toggle */}
         <div className="flex items-center gap-3 md:hidden">
           <LanguageToggle />
+          <ThemeToggle />
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="text-foreground"
