@@ -24,10 +24,12 @@ export function Footer() {
             Instagram
           </a>
           <a
-            href="#"
+            href="https://www.facebook.com/ale.fleitas.737"
+            target="_blank"
+            rel="noreferrer"
             className="text-xs uppercase tracking-wider text-white/50 transition-colors hover:text-primary"
           >
-            Twitter
+            Facebook
           </a>
         </div>
       </div>
